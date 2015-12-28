@@ -44,7 +44,7 @@ public class Cube {
         theta += 0.01;
     }
 
-	public void rneder(GLAutoDrawable drawable) {
+	public void render(GLAutoDrawable drawable) {
         GL2 gl = drawable.getGL().getGL2();
 
         gl.glLoadIdentity();
@@ -59,42 +59,42 @@ public class Cube {
 
         gl.glBegin(GL2.GL_QUADS);
 
-        // Back - red face
+        // Back
         gl.glColor3f(1, 0, 0);
         gl.glVertex3f(this.x, -this.x, this.x);
         gl.glVertex3f(-this.x, -this.x, this.x);
         gl.glVertex3f(-this.x, this.x, this.x);
         gl.glVertex3f(this.x, this.x, this.x);
 
-        // Bottom - orange face
+        // Bottom
         gl.glColor3f(1, .5f, 0);
         gl.glVertex3f(this.x, -this.x, this.x);
         gl.glVertex3f(-this.x, -this.x, this.x);
         gl.glVertex3f(-this.x, -this.x, -this.x);
         gl.glVertex3f(this.x, -this.x, -this.x);
 
-        // Left - blue face
+        // Left
         gl.glColor3f(0, 0, 1);
         gl.glVertex3f(-this.x, -this.x, this.x);
         gl.glVertex3f(-this.x, -this.x, -this.x);
         gl.glVertex3f(-this.x, this.x, -this.x);
         gl.glVertex3f(-this.x, this.x, this.x);
 
-        // Right - violet face
+        // Right
         gl.glColor3f(1, 0, .5f);
         gl.glVertex3f(this.x, this.x, -this.x);
         gl.glVertex3f(this.x, this.x, this.x);
         gl.glVertex3f(this.x, -this.x, this.x);
         gl.glVertex3f(this.x, -this.x, -this.x);
 
-        // Top - green face
+        // Top
         gl.glColor3f(0, 1, 0);
         gl.glVertex3f(this.x, this.x, -this.x);
         gl.glVertex3f(-this.x, this.x, -this.x);
         gl.glVertex3f(-this.x, this.x, this.x);
         gl.glVertex3f(this.x, this.x, this.x);
 
-        // Front - yellow face
+        // Front
         gl.glColor3f(1, 1, 0);
         gl.glVertex3f(-this.x, -this.x, -this.x);
         gl.glVertex3f(this.x, -this.x, -this.x);
