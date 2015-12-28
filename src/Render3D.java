@@ -30,6 +30,21 @@ public class Render3D implements GLEventListener {
 		 gl.glEnable(GL2.GL_DEPTH_TEST);
 		 gl.glDepthFunc(GL2.GL_LEQUAL);
 		 gl.glHint(GL2.GL_PERSPECTIVE_CORRECTION_HINT, GL2.GL_NICEST);
+		 
+		  /*fileImg1 = new File(Mon Image);
+		  fileImg2 = new File(Mon Image);
+		  fileImg3 = new File(Mon Image);
+		  t1 = TextureIO.newTexture(fileImg1, true);
+		  t2 = TextureIO.newTexture(fileImg2, true);
+		  t3 = TextureIO.newTexture(fileImg3, true);
+			
+		  t1 = t1.getTextureObject(gl);
+		  t2 = t2.getTextureObject(gl);
+		  t3 = t3.getTextureObject(gl);*/
+			
+		  Cube cube1 = new Cube(0.0f, -0.5f, -8.0f, 0.6f, 0.0f, 1.5f, 0.0f, 0.0f, 0.0f, 0.0f, t1);
+		  Cube cube2 = new Cube(0.0f, 1.2f, -8.0f, 0.45f, 1.5f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, t2);
+		  Cube cube3 = new Cube(0.0f, 0.0f, -8.0f, 0.3f, 0.0f, 0.0f, 1.5f, 2.7f, 0.0f, 0.0f, t3);
 	}
 
 	@Override
